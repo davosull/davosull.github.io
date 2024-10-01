@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<link rel='shortcut icon' href='../favicon.ico' type='image/x-icon'/ >
+<meta charset="UTF-8">
+<meta name="description" content="Hello, my name is David O'Sullivan and I am a digital designer based in Melbourne, Australia.">
+<meta name="keywords" content="UX, UI, Product, Design, Designer">
+<meta name="author" content="David O'Sullivan">
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+<style type="text/css">
+	.pullquote {
+		border-left: 2px solid #FB6B46;
+		padding-left: 20px;
+		margin: 30px 0;
+	}
+		.pullquote h3 {
+		margin-bottom: 20px;
+	}
+
+		.smallbody {
+font-size: 14px;
+line-height: 21px;
+font-family: Raleway;
+	}
+
+</style>
+</head>
+<body>
+<div id="logo"><a href="/3072/"><img src="logo.svg" width="100%" /></a></div>
+<div class="heading"><h1>Whispir Workflows</h1><span class="smallcaps">Case study </span>
+<div class="divider"><div class="dividerInner"></div></div></div>
+<div class="innercontent">
+
+
+<p>
+Whispir allows users to automate sms and email sending. Our team updated the existing interface to a drag and drop workflow builder.
+</p>
+<img src="assets/workflow.png"/>
+<p class="smallbody">
+Early concept design and research work was shared by the entire UX team, including myself and three other designers. Whispir changed the structure of the product teams halfway through the project, and I became the Lead Designer.
+</p>
+
+
+
+<div class="divider"><div class="dividerInner"></div></div>
+<h2>Problem Discovery</h2>
+
+<p>
+ We conducted a series of customer interviews and found most users were intimidated by the existing interface. In fact, the majority of workflow setup was not being done by the customers themselves, but by Whispir's in-house support and enablement teams.
+</p><div class="pullquote">
+ <h3>"We need to update our workflows, but don't feel confident that we have the skill or knowledge to do it."</h3>
+ <span class="smallcaps">Customer 9</span>
+</div>
+<div class="pullquote">
+  <h3>"While we can update the buttons and text, to edit the events we've had to go back to Whispir support."</h3>
+   <span class="smallcaps">Customer 21</span>
+</div>
+
+<p>
+This early research informed our goal - create a self-service interface, suitable for our less technical customers. To add context to this goal, I documented 8 of Whispir's real use cases, creating flow diagrams and simple personas.
+</p>
+	<img src="assets/airport1.png"/>
+<div class="divider"><div class="dividerInner"></div></div>
+<h2>Ideation, Prototyping & Testing</h2>
+<p>The biggest challenge was replacing the code snippets used in the existing platform with something easier to understand.</p>
+<p>Several off-the-shelf workflow solutions were identified by the project managers and engineers, and the UX team created various concept designs. We took two of the ideas with the most promise and tested paper prototypes with customers.
+</p>
+<img src="assets/testing1.png"/>
+<p>
+We found that a 'click to add a step' approach (used by Messagebird, Activecampaign) performed significantly better than a 'drag to connect steps' approach (used by Twilio, Total.js flow)
+</p>
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>Implementation</h2>
+<p>With a better idea of how customers would react to a workflow tool, I expanded on the design in a high fidelity prototype based on the most successful flow, and updated the language used.</p>
+<p>For example, 'start your workflow' created an expectation that users could pause or stop a workflow, which was not supported in the first release. I used the term 'trigger your workflow' to better reflect this.</p>
+<img src="assets/prototype.png" />
+<p>
+	Using a user journey map, we divided the work into multiple iterations, starting with the simplest real customer use case we could find: sending an emergency alert SMS to a predefined list when an online form is submitted.
+</p><img src="assets/journey-map2.jpg" />
+<p>In the lead up to the first release, we ran three more rounds of user testing, including upcoming designs in Figma, and the live changes in a local development environment.
+</p>
+<p>Testing the live code turned out to be particularly useful, as we found several users struggled with the 'drag to scroll' navigation we'd implemented. We updated the browser scroll function to zoom, a pattern borrowed from google maps, which performed better in later tests.
+</p>
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>Post Release</h2>
+<p>Once we had users in the platform, I focused on observing sessions in fullstory, logging and prioritising usability issues in the backlog.</p>
+<br /><br /><br /><br />
+
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<link rel='shortcut icon' href='../favicon.ico' type='image/x-icon'/ >
+<meta charset="UTF-8">
+<meta name="description" content="Hello, my name is David O'Sullivan and I am a digital designer based in Melbourne, Australia.">
+<meta name="keywords" content="UX, UI, Product, Design, Designer">
+<meta name="author" content="David O'Sullivan">
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+<style type="text/css">
+	.pullquote {
+		border-left: 2px solid #FB6B46;
+		padding-left: 20px;
+		margin: 30px 0;
+	}
+		.pullquote h3 {
+		margin-bottom: 20px;
+	}
+
+		.smallbody {
+font-size: 14px;
+line-height: 21px;
+font-family: Raleway;
+	}
+
+</style>
+</head>
+<body>
+<div id="logo"><a href="/3072/"><img src="logo.svg" width="100%" /></a></div>
+<div class="heading"><h1>Bot builder: Multiple flows</h1><span class="smallcaps">Case study</span>
+<div class="divider"><div class="dividerInner"></div></div></div>
+<div class="innercontent">
+
+
+	<p>Answer Bot is Zendesk's first party chatbot builder. The wider Answer Bot team includes 2 other designers, a content strategist and researcher along with 4 dedicated product teams. I sit on the bot builder team, and was the primary designer on the Multiple Flows work that I’ll describe today.
+	</p>
+    <a href='https://zendesk.wistia.com/medias/016up687kh'> The existing experience</a>
+
+    <div class="divider"><div class="dividerInner"></div></div>
+	
+    <h2>Audience</h2>
+	<p>
+		Our challenge was to increase adoption by enterprise customers, while continuing to support simpler SMB use cases.
+	</p>
+	<b>SMB</b>
+	<p>Joe manages a team of 3 chat support agents. They provide customer service through a chat widget on their website. To save his team time, he's built a chatbot using Zendesk Answer Bot. The bot answers a handful of simple queries, including ‘Forgot password' and 'My order hasn't arrived’. He's deflected some repetitive questions, and is happy with the product.
+	</p>
+	
+<b>Enterprise</b>
+	<p>Michelle manages a department of 22 chat support agents. Her goal is to automate answers to at least 80% of incoming customer questions and she’s formed a dedicated 'automation' team to do so. She sees Answer Bot as a basic, beginner level tool, unsuitable for her team's needs.
+	</p>
+
+	
+	
+    <div class="divider"><div class="dividerInner"></div></div>
+	<h2>Problem discovery</h2>
+    <p>The product manager and I undertook a number of early research activities, supported by a UX researcher.
+    </p>
+	<ul>
+		<li>8 customer interviews, focusing on admins with complex bots</li>
+		<li>Competitor analysis</li>
+		<li>Interviews with internal support team and solution consultants</li>
+		<li>Analysis of existing bot data
+	</li>
+</ul>
+
+<h3>Key insights</h3>
+	<p>Answer Bot’s interface was based on designing an end-to-end conversation as a single flow. This didn't really match our target customer's needs. Rather than a conversation, they needed a list of canned responses.
+		<img src="assets/bigtree.png" />
+    </p>	<p>Several interviewees shared spreadsheets with hundreds of questions they wanted to target, much larger than the five to ten FAQs that Answer Bot was optimised for. As a result of this mismatch, the few enterprise bots that had been built were complex and difficult to navigate with the pan and zoom controls.
+	</p>
+
+    <div class="pullquote">
+        <h3>“Can’t find particular problems… Oh wait, I was 5 feet in another direction!”</h3>
+        <span class="smallcaps">Interview Participant</span>
+       </div>
+	
+    <h3>The problem</h3>
+	<p>Rather than building a single 'conversation', how can the interface be updated to better support building a 'list of answers'
+</p>
+<div class="divider"><div class="dividerInner"></div></div>
+<h2>	Solution Discovery</h2>
+    <p>
+    Over several working sessions, I shared a number of competitor approaches with product and engineering, borrowing the best parts from different competitors and mocking up how they might work in our interface.</p><p>
+	The original assumption was that the bot builder would continue to function as a single large decision tree, but we quickly realised a more radical change was needed. We landed on removing the existing model entirely, in favour of multiple smaller flows, each one focused on a different customer request. The customer would type a question, and would be matched to the correct answer through our bot AI. This was a model used by a number of our competitors, and was much better suited to the ‘list of answers’ mindset.</p>
+
+	<img src="assets/flows.gif" />
+	<div class="divider"><div class="dividerInner"></div></div>
+	<h2>Iterating on the design</h2>
+    <p>
+    Working with the product manager and 2 tech leads, I stripped back the functionality to an MVP. To keep the scope manageable, we were forced to adapt the original design around some technical constraints. For example, It was very difficult to publish each flow independently. I shared the risks around this with engineering, and we compromised by adding a 'publish status' column and optional 'inactive' state for the first release.
+    <img src="assets/Status1.png" /> <br /><br />
+</p><p>
+    The product manager and I also had regular consults with the data science team throughout the project, leading to a number of improvements to the design, most notably allowing admins to manually add training phrases. This boosted the bot's performance significantly, but the concept of training an AI was difficult to communicate to our users. The content strategist and I iterated on the design several times, over 2 rounds of user testing to get the messaging right.
+	</p>  <img src="assets/Frame 1.png" /> 
+	<br /><br />
+<p>	Given the scale of the changes and the number of adjacent teams impacted by the work. I leaned heavily on video explainers (along with the usual Figma prototypes and diagrams) to share decisions, progress and collect feedback from key stakeholders.
+	</p>
+    <div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/8f755178ab9549b2bc52e76c3e6efb96" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+	
+	
+<div class="divider"><div class="dividerInner"></div></div>
+<h3>Outcome</h3>
+	<p>The end result was a set of annotated Figma prototypes describing the experience from various customer's points of view. I presented these to senior leadership, and regularly consulted with engineering throughout the development process. 
+</p>	
+<ul>
+	<li>A customer who has build a bot</li>
+	<li>A brand new user</li>
+	<li>A user migrating an existing bot [phase 2]</li>
+</ul>
+<img src="assets/prototypes.png" /> 
+	
+<p>	The product is currently in a closed beta and is scheduled for general release in Q2 of this year.</p>
+	
+<br /><br /><br /><br />
+
+</div>
+</body>
+</html>

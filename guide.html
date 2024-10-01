@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<link rel='shortcut icon' href='../favicon.ico' type='image/x-icon'/ >
+<meta charset="UTF-8">
+<meta name="description" content="Hello, my name is David O'Sullivan and I am a digital designer based in Melbourne, Australia.">
+<meta name="keywords" content="UX, UI, Product, Design, Designer">
+<meta name="author" content="David O'Sullivan">
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div id="logo"><a href="/3072/"><img src="logo.svg" width="100%" /></a></div>
+<div class="heading"><h1>Railay Climbing App</h1><span class="smallcaps">Research &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prototyping</span>
+<div class="divider"><div class="dividerInner"></div></div></div>
+<div class="innercontent">
+
+
+<p>In 2018, while travelling, I designed and developed a rock climbing guidebook app for the Railay Beach, Thailand. I followed a lean UX research process, and built a minimum viable product in react.js.</p>
+
+<p>I used webscraper.io and phantom.js to gather publicly available climbing route information. My travel partner and I then photographed and documented the routes and wrote the initial copy. The project took just over 30 days.</p>
+
+<p>Best viewed on mobile: <a href="https://davosull.github.io/arapiles-pwa/">Railay Guide v0.1</a></p>
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>Initial Research & Findings</h2>
+<p>Climbing is perfect for guerrilla user research. For every person climbing, you'll find three or four climbers hanging out at the base of the cliff. I Interviewed 7 international climbers in Tonsai/Railay on their process for researching climbing areas.</p>
+<img src="assets/interviews.jpg" class="inline-image" /><br /><br />
+
+<h4>Discovering an area</h4>
+<p>For broader area information, most people preferred blog posts and forums. In the early stages of their research, people were most interested in weather, facilities, prices, access and approach, climbing grades, community and the likelihood of finding climbing partners.
+</p>
+
+<h4>On arriving in an area</h4>
+<p>If people intend to stay for a long time, they will buy a guidebook, For shorter trips, it’s a social norm to take photos of relevant guidebook pages. Unless they meet other climbers, people tend to look for the easiest accessible crag with a bunch of climbs within their grade range.</p>
+
+<h4>Approach information</h4>
+<p>Directions to the area came up several times in interviews. Neither books or websites do a good job at directing people to climbs. A climber mentioned one guidebook step being “Walk through the jungle for 20 minutes”. People like a lot more detail than that. Several mentioned Google Maps and Maps.me pins being useful, but in many areas paths aren't marked on these services. Step-by-step directions with photos was also suggested.
+</p>
+
+<h4>Trust</h4>
+<p>Incorrect information is a fear for climbers, particularly dodgy bolts, inaccurate route lengths and ending up on the wrong climb. People trust information directly from other climbers the most. In general people also set much higher standards for guidebooks, often preferring an out of date guidebook to a website. There's an expectation that online information is unreliable.
+</p>
+
+<h4>Apps & Websites</h4>
+<p>Nobody was loyal to a particular climbing app or website, but they would often come across these sites in their Google results, with 27 Crags mentioned by about half of the interviewees, and Vertical Life mentioned by a couple.
+</p>
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>Competitor Analysis</h2>
+<img src="assets/compeditors.png" class="inline-image" /><br /><br />
+<p>27 Crags, The Crag, Mountain Project and Vertical Life are all major climbing sites/apps. On reviewing these sites, I noticed a number of elements at odds with the user interview results.
+</p><p> They provided in-depth technical information about the general area, rather than a few paragraphs: weather data, graphs of grades etc.
+ </p><p>The information was structured around the whole world, rather than local climbing areas.
+</p>
+<p>The process for installing an app and downloading user information was complicated.</p>
+<h4>Steps to install</h4><img src="assets/clmb1-flow.svg" class="inline-image" />
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>Research Takeaways</h2>
+
+<br />	<br /><h4>Think Local, not global.</h4>
+<p>People aren't loyal to any one site, they want the best information for wherever they are right now.</p>
+<br /><br /><h4>Skip the Graphs. </h4>
+<p>For general area information, people prefer an easy to digest blog post or YouTube video.</p>
+<br /><br />
+<h4>Location, Location, Location</h4>
+<p>Provide really good approach information. Nobody wants to get lost on the way to a climb.</p>
+<br /><br /><h4>Replace the 'photos of a guidebook' on a climber's phone</h4>
+<p>If the information is good, and available offline, people are happy to use their phones at a crag. 
+</p><p>Armed with this research, I began designing. Providing general area information as a blog post, rather than data, would allow users to discover our app through search and sharing. Using Google’s progressive web app format would allow users to make the app available offline.
+</p>
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>User Journey</h2>
+<img src="assets/clmb0-flow.svg" class="inline-image" />
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>Wireframes</h2>
+<img src="assets/tonsai-wires.jpg" class="inline-image" />
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>Clickable Wires</h2>
+<p>I created a simple clickable mockup of the site (I usually use Invision for this) allowing me to talk through how the site will behave and identify any major usability problems early.
+<br /><br />
+<a href="http://dosullivan.ie/clickable/"">Clickable Wires</a>
+</p>
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>Coding</h2>
+<p>I wanted to tackle the most technically challenging tasks early in the process, so I built an early technical prototype, based on mount Arapiles in Victoria.
+	<ul>
+	<li>Used webscraper.io to collect public domain route information.</li>
+	<li>Built the core of the site in react, including functionality to filter routes.</li>
+	<li>Initial attempt at visual style and some simple css animation tests.</li>
+	<li>Set up the test site as a progressive web app, allowing offline access saving the site to a mobile home screen.</li>
+</ul>
+<a href="http://dosullivan.ie/arapiles-pwa/"">Arapiles Prototype</a> (Best viewed on mobile, or in a browser window resized to 300-400px)
+</p>
+
+
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>Minimum Viable Product</h2>
+
+<p>Following the lean startup methodology, I developed an MVP, ignoring all but the most essential features in order to get a working version of the app with real data.</p>
+<ul>
+	<li>Updated the design based on the initial wireframes.</li>
+	<li>Added a general guide to the island and crag information.</li>
+	<li>Photographed route approaches and topos.</li>
+	<li>Updated the visual design.</li>
+	<li>Launched a working alpha version of the app.</li>
+	</ul>
+	<a href="https://davosull.github.io/arapiles-pwa/">Railay Guide v0.1</a></p>
+
+
+<div class="divider"><div class="dividerInner"></div></div>
+
+<h2>Features</h2>
+<h4>Easy offline install</h4>
+<p>Here are the steps required to install our progressive web app vs a competitor's traditional android app.</p>
+<h4>Competitor App</h4>
+<img src="assets/clmb1-flow.svg" class="inline-image" />
+<h4>Our App</h4>
+<img src="assets/clmb2-flow.svg" class="inline-image" />
+
+<h4>No more getting lost</h4>
+<p>Directly responding to user’s concerns, we provided step-by-step instructions to reach areas not covered by Google Maps.</p>
+
+<h4>Filter by grade</h4>
+<p>In a guidebook, users need to check that a climb isn't too difficult. We only show climbs within their ability.</p>
+
+</div>
+
+
+
+
+</div>
+</body>
+</html>
