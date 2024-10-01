@@ -1,0 +1,258 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width" /><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+	$(".loader").fadeOut("slow");
+})
+</script>
+
+<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+<meta charset="UTF-8">
+<meta name="description" content="Hello, my name is David O'Sullivan and I am a digital designer based in Melbourne, Australia.">
+<meta name="keywords" content="Digital, Design, Designer">
+<meta name="author" content="David O'Sullivan">
+
+<link href="https://fonts.googleapis.com/css?family=Nixie+One|Open+Sans:400,800" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/style.css">
+
+<style>
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: url('assets/page-loader.gif') 50% 50% no-repeat #000;
+}
+
+/* ---------------------------- Background, div size & Colour ---------------------------- */
+
+.inline-image {
+	width: 100%;
+	max-width: 600px;
+}
+
+#band1 {
+	background: #000;
+width: 100%;
+}
+
+.maincontent {
+position: relative;
+}
+
+
+#intro {
+	background-color: #fff;
+	width: 100%;
+	padding-top: 60px;
+	margin-bottom: 30px;
+}
+
+#intro p {
+	font-size: 18px;
+	line-height: 1.8em;
+}
+
+#intro-inner {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.intro-inner2 {
+	overflow: hidden;
+	margin-top: 160px;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+@media screen and (min-width: 800px) {
+
+.textblock {
+max-width: 460px;
+}
+
+.imgblock {
+max-width: 300px;
+}
+
+.left {
+float: left;
+}
+
+.textblock.left {
+margin-right: 40px;
+}
+
+.textblock.right {
+margin-left: 40px;
+}
+
+.right {
+float: right;
+}
+}
+
+@media screen and (max-width: 800px) {
+
+.textblock {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.imgblock {
+	margin-left: 20px;
+	margin-right: 20px;
+	width: calc(100% - 40px);
+}
+
+#intro {
+	background-image: none;
+	padding-top: 40px;
+}
+
+.intro-inner2 {
+	margin-top: 40px;
+}
+
+}
+
+/* ---------------------------- Fonts & text size ---------------------------- */
+
+body{
+		font-family: 'Open Sans';
+}
+
+p {
+	font-weight: 400;
+	margin-top: 5px;
+}
+
+h1 {
+	font-weight: 800;
+	color:#3F5852;
+}
+
+h2 {
+	font-weight: 800;
+	margin-top: 100px;
+	color:#3F5852;
+}
+
+h4 {
+	margin-top: 30px;
+	margin-bottom: 0px;
+	font-weight: 800;
+	color:#3F5852;
+}
+
+li {
+	margin-top: 10px;
+}
+
+/* ---------------------------- Positioning text ---------------------------- */
+
+
+
+</style>
+</head>
+
+<body><div class="loader"></div>
+
+
+<div id="topbar">
+<a href=index.html><div id="logo"></div></a>
+<a href=app.html><div id="prev"></div></a>
+<a href=guide.html><div id="next"></div></a>
+</div>
+
+
+<div id="container">
+
+<div id="band1">
+<div class="maincontent">
+<img src="assets/allout.jpg" />
+</div>
+</div>
+
+<div id="intro">
+<div id="intro-inner">
+<h1>All Out Design</h1>
+<p>All Out Design is a Dublin based creative agency that creates graffiti art and murals for businesses, ad campaigns and events. I worked remotely with the team to improve the conversion rate of their website. This included UX research, visual design and developing a prototype in react.</p>
+
+<p>TLDR: View the <a href="http://allout.ie/contact/">Original contact page</a> | View the <a href="http://graffiti-hire.com/build">Proposed Changes</a></p>
+
+<h2>Initial research & ideas</h2>
+
+<p>Analytics & Adwords data showed where traffic was coming from, where traffic was dropping off and a little demographic data. The form submission data, plus some interviews with management gave me an idea of what sort of requests were coming through and a little info about the customers themselves.</p>
+<h3>User flow (simplified)</h3>
+<img src="assets/journey1.png" class="inline-image" />
+<h3>Personas</h3>
+<img src="assets/personas.jpg" class="inline-image" />
+<br />
+<h3>Narrowing our audience</h3>
+<p>Many high value customers, like Jamie & Michelle needed to get costs approved by their boss or client. They were generally time poor, and had deadlines to meet. The current process was to fill out a contact form, and wait for someone to email back a price. We decided to focus our efforts on improving this interaction.</p>
+
+<h2>Hypothesis</h2>
+<p> We believed that by providing business customers with an instant price estimate, they'd be more likely to present our services to their boss and ultimately more likely to use our services.</p>
+<p>We could validate this by building a prototype and A/B test it against the existing site. If our assumption was correct, we'd see an increase in the number of qualified* leads coming through from the site.</p>
+
+<p style="font-size: 14px">*Customers with realistic price expectations, who are in a position to buy our product.</p>
+
+<h3>Early concept wireframes:</h3>
+
+<img src="assets/wireframes1.png" class="inline-image" />
+
+
+<h2>The first prototype</h2>
+
+<p>I created a flow chart of the questions the All Out team asked new customers and documented the impact various answers would have on price. We ran some past requests through the flowchart, tweaking it to closer match the estimates supplied by the team. </p>
+<br />
+<img src="assets/flowchart.png" class="inline-image" />
+<br /><br /><p>To get some early feedback, I built a simple <a href="http://dosullivan.ie/testgraff/">html form</a> and used javascript to generate a price estimate.</p>
+<h2>User Feedback & Observations</h2>
+<ul>
+<li>People were most comfortable answering direct questions with short objective answers, describing the space, timeframe, etc.</li>
+<li>Capturing creative requirements in multiple choice boxes was awkward and impersonal. It also didn't have a huge impact on price. I removed it from the calculation and added a simple text box for creative requirements.</li>
+<li>People don't know exactly what size their wall is. Rather than ask for a specific number of meters squared, I switched to a multiple choice answer big/medium/small, plus a human figure for size reference.</li>
+<li>The form was too long, people were intimidated by the idea of filling it out. I removed several unnecessary questions and answers, and divided the form into multiple simple steps to reduce the cognitive load.</li>
+</ul>
+<br />
+<h3>Prototype v2</h3>
+<img src="assets/prototype2.png" class="inline-image" />
+<h2>Validating the idea</h2>
+<img src="assets/prototype4.png" class="inline-image" /><br /><br />
+<p>I built out the final <a href="http://graffiti-hire.com/build">prototype</a> in react and hosted it on a separate server from the main site. I then set up an A/B test in Adwords, splitting the traffic between the existing landing page and the prototype.</p>
+
+<img src="assets/adwords2.jpg" class="inline-image" />
+<br /><br />
+<h2>Results</h2>
+	<p>After running the campaign for a month, the prototype showed: </p>
+	<ol>
+		<li>Slightly more leads coming through.</li>
+		<li>Less time spent drafting initial quotes.</li>
+		<li>Less users dropping off early in the process.</li>
+	</ol>
+	</div>
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width" /><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+	$(".loader").fadeOut("slow");
+})
+</script>
+
+<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+<meta charset="UTF-8">
+<meta name="description" content="Hello, my name is David O'Sullivan and I am a digital designer based in Melbourne, Australia.">
+<meta name="keywords" content="Digital, Design, Designer">
+<meta name="author" content="David O'Sullivan">
+
+	<link href="https://fonts.googleapis.com/css?family=Nixie+One|Open+Sans:400,800" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/style.css">
+<style>
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: url('assets/page-loader.gif') 50% 50% no-repeat #000;
+}
+
+/* ---------------------------- Background, div size & Colour ---------------------------- */
+
+.inline-image {
+	width: 100%;
+	max-width: 600px;
+}
+
+#band1 {
+	background: #000;
+width: 100%;
+}
+
+.maincontent {
+position: relative;
+}
+
+
+#intro {
+	background-color: #fff;
+	width: 100%;
+	padding-top: 60px;
+	margin-bottom: 30px;
+}
+
+#intro p {
+	font-size: 18px;
+	line-height: 1.8em;
+}
+
+#intro-inner {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.intro-inner2 {
+	overflow: hidden;
+	margin-top: 160px;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+@media screen and (min-width: 800px) {
+
+.textblock {
+max-width: 460px;
+}
+
+.imgblock {
+max-width: 300px;
+}
+
+.left {
+float: left;
+}
+
+.textblock.left {
+margin-right: 40px;
+}
+
+.textblock.right {
+margin-left: 40px;
+}
+
+.right {
+float: right;
+}
+}
+
+@media screen and (max-width: 800px) {
+
+.textblock {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.imgblock {
+	margin-left: 20px;
+	margin-right: 20px;
+	width: calc(100% - 40px);
+}
+
+#intro {
+	background-image: none;
+	padding-top: 40px;
+}
+
+.intro-inner2 {
+	margin-top: 40px;
+}
+
+}
+
+/* ---------------------------- Fonts & text size ---------------------------- */
+
+body{
+		font-family: 'Open Sans';
+}
+
+p {
+	font-weight: 400;
+	margin-top: 5px;
+}
+
+h1 {
+	font-weight: 800;
+	color:#3F5852;
+}
+
+h2 {
+	font-weight: 800;
+	margin-top: 100px;
+	color:#3F5852;
+}
+
+h4 {
+	margin-top: 30px;
+	margin-bottom: 0px;
+	font-weight: 800;
+	color:#3F5852;
+}
+
+li {
+	margin-top: 10px;
+}
+
+/* ---------------------------- Positioning text ---------------------------- */
+
+
+
+</style>
+</head>
+
+<body><div class="loader"></div>
+
+
+<div id="topbar">
+<a href=index.html><div id="logo"></div></a>
+<a href=allout.html><div id="prev"></div></a>
+<a href=prh.html><div id="next"></div></a>
+</div>
+
+
+<div id="container">
+
+<div id="band1">
+<div class="maincontent">
+<img src="assets/climbing.jpg" />
+</div>
+</div>
+
+<div id="intro">
+<div id="intro-inner">
+<h1>Building a better climbing app</h1>
+
+<p>In 2018, while travelling, I designed and developed a rock climbing guidebook app for the Railay Beach, Thailand. I followed a lean UX research process, and built a minimum viable product in react.js.</p>
+
+<p>I used webscraper.io & phantom.js to gather publicly available climbing route information. My travel partner and I then photographed & documented the routes and wrote the initial copy. The project took just over 30 days.</p>
+
+<p>Best viewed on mobile: <a href="https://davosull.github.io/arapiles-pwa/">Railay Guide v0.1</a></p>
+
+<h2>Initial Research & Findings</h2>
+<p>Climbing is perfect for guerrilla user research. For every person climbing, you'll find three or four hanging out at the base of the cliff. I Interviewed 7 international climbers in the Tonsai/Railay area in Thailand on their process for researching climbing areas.</p>
+<img src="assets/interviews.jpg" class="inline-image" /><br /><br />
+
+<h4>Discovering an area</h4>
+<p>For broader area info, most people preferred blog posts & forums rather than technical & route information. At an early stage, people cared about the top climbs, facilities, prices, access & approach, community and likelihood of finding partners, grades and weather.</p>
+
+<h4>On arriving in an area</h4>
+<p>If people intend to stay for a long time, they will buy a guidebook, For shorter trips, it’s a social norm to take photos of relevant guidebook pages. Unless they meet other climbers, people tend to look for the easiest accessible crag with a bunch of climbs within their grade range.</p>
+
+<h4>Approach information</h4>
+<p>Directions to the area came up several times in the interviews. Neither books or sites do a good enough job describing how to get to the climbs. A climber mentioned one guidebook step being “Walk through the jungle for 20 minutes”. People like a lot more detail than that. Several mentioned google maps & maps.me pins being useful, but in many area's paths aren't marked on these services. Step by step directions with photos was also suggested.</p>
+
+<h4>Trust</h4>
+<p>Incorrect info is a fear for climbers, particularly dodgy bolts, route length and ending up on the wrong climb.<br />
+People trust info directly from other climbers the most. In general people also set much higher standards for guidebooks, often preferring an out of date guidebook to a website. There's an expectation that online information is unreliable.</p>
+
+<h4>Apps & Websites</h4>
+<p>Nobody was loyal to a particular climbing app or website, but they would often come across these sites in their google results, with 27 crags mentioned by about half of the group, and vertical life mentioned by a couple of people.</p>
+
+<h2>Compeditor Analysis</h2>
+<img src="assets/compeditors.jpg" class="inline-image" /><br /><br />
+<p>27 crags, thecrag, mountainproject and vertical life were all major climbing sites/apps. 
+On reviewing these sites, I noticed a number of elements at odds with the user interview results.</p><p> They provided in depth technical information about the general area, rather than a few paragraphs: weather data, graphs of grades etc. </p><p>The information was structured around the whole world, rather than local climbing areas.</p>
+<p>The process for installing an apps and downloading user information was complicated.</p>
+<h3>Steps to install</h3><img src="assets/vertical.png" class="inline-image" />
+
+<h2>Research Takeaways</h2>
+
+<ol>
+	<li>Think Local, not global.<br />
+People aren't loyal to any one site, they want the best info for wherever they are right now.
+</li>
+<li>Skip the Graphs. <br />
+</li>For general area info, people prefer an easy to digest blog post or youtube video.
+
+<li>Location, Location, Location<br />
+provide really good approach info. Nobody wants to get lost on the way to a climb.
+</li>
+<li>Replace the 'photos of a guidebook' on a climber's phone<br />
+If the information is good, and available offline, people are happy to use their phones at a crag.
+</li>
+</ol>
+
+<p>Armed with this research, I put began designing. Providing general area information as a blog post, rather than data would allow users to discover our app through search & sharing, and using googles progressive web app format would allow users to make it available offline.</p>
+
+<h2>User Journey</h2>
+<img src="assets/tonsai-journey.jpg" class="inline-image" />
+
+<h2>Wireframes</h2>
+<img src="assets/tonsai-wires.jpg" class="inline-image" />
+
+<h2>Clickable Wires</h2>
+<p>I created a simple clickable mockup of the site (I usually use Invision for this) allowing me to talk through how the site will behave and identify any major usability problems early.
+<br /><br />
+<a href="http://dosullivan.ie/clickable/"">Clickable Wires</a>
+</p>
+
+
+<h2>Coding</h2>
+<p>I wanted to tackle the most technically challenging tasks early in the process, so I built an early technical prototype, based on mount Arapiles in Victoria.
+	<ul>
+	<li>Used webscraper.io to collect public domain route information.</li>
+	<li>Built the core of the site in react, including functionality to filter routes.</li>
+	<li>Initial attempt at visual style & some simple css animation tests.</li>
+	<li>Set up the test site as a Progressive web app, allowing offline access saving the site to a mobile home screen.</li>
+</ul>
+<a href="http://dosullivan.ie/arapiles-pwa/"">Arapiles Prototype</a> (Best viewed on mobile, or in a browser window resized to 300-400px)</p>
+
+
+
+
+
+<h2>Minimum Viable Product</h2>
+
+<p>Following the lean startup methodology, I developed an MVP, ignoring all but the most essential features in order to get a working version of the app with real data.</p>
+<ul>
+	<li>Updated the design based on the initial wireframes.</li>
+	<li>Added a general guide to the island and crag information</li>
+	<li>Photographed route approaches and topos</li>
+	<li>Updated the visual design.</li>
+	<li>Launched a working alpha version of the app</li>
+	</ul>
+	<a href="https://davosull.github.io/arapiles-pwa/">Railay Guide v0.1</a></p>
+
+
+<h2>Features</h2>
+<h3>Easy offline install</h3>
+<p>Here are the steps required to install our progressive web app, vs a compeditor's traditional android app.</p>
+<img src="assets/compare.png" class="inline-image" />
+
+<h3>No more getting lost</h3>
+<p>Directly responding to users concerns, we provided step by step instructions to reach areas not covered by google maps.</p>
+
+<h3>Filter by grade</h3>
+<p>In a guidebook, users need to check that a climb isn't too difficult. We only show climbs within their ability.</p>
+
+</div>
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
