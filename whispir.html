@@ -42,17 +42,17 @@ Whispir allows users to automate sms and email sending. Our team updated the exi
 </p>
 <img src="assets/workflow.png"/>
 <p class="smallbody">
-Early concept design and research work was shared by the entire UX team, including myself and three other designers. Whispir changed the structure of the product teams halfway through the project, and I became the Lead Designer.
-</p>
-
+	Inital design concept
 
 
 <div class="divider"><div class="dividerInner"></div></div>
 <h2>Problem Discovery</h2>
+<p>
+	To achieve a cohesive design solution, we approached the initial research and discovery as a team of 3 designers, supported by a dedicated UX researcher, conducting initial research together and creating an initial set of high level concepts and visual treatments.
+</p>
 
 <p>
- We conducted a series of customer interviews and found most users were intimidated by the existing interface. In fact, the majority of workflow setup was not being done by the customers themselves, but by Whispir's in-house support and enablement teams.
-</p><div class="pullquote">
+	Initial customer interviews indicated that most users were intimidated by the existing interface. In fact, the majority of workflow setup was not being done by the customers themselves, but by Whispir's in-house support and enablement teams.</p><div class="pullquote">
  <h3>"We need to update our workflows, but don't feel confident that we have the skill or knowledge to do it."</h3>
  <span class="smallcaps">Customer 9</span>
 </div>
@@ -62,37 +62,37 @@ Early concept design and research work was shared by the entire UX team, includi
 </div>
 
 <p>
-This early research informed our goal - create a self-service interface, suitable for our less technical customers. To add context to this goal, I documented 8 of Whispir's real use cases, creating flow diagrams and simple personas.
+This feedback shaped our primary goal: create a self-service interface, suitable for our less technical customers. As the other designers moved to other features, I took over the workflow builder work full time. To provide context and focus, I documented eight of Whispir’s real-world use cases, complete with flow diagrams and personas and presented to the wider engineering team.
 </p>
 	<img src="assets/airport1.png"/>
 <div class="divider"><div class="dividerInner"></div></div>
 <h2>Ideation, Prototyping & Testing</h2>
-<p>The biggest challenge was replacing the code snippets used in the existing platform with something easier to understand.</p>
-<p>Several off-the-shelf workflow solutions were identified by the project managers and engineers, and the UX team created various concept designs. We took two of the ideas with the most promise and tested paper prototypes with customers.
-</p>
+<p>The team loved the idea of a visual builder, and I worked with the engineering team to identify what was possible with various libraries, creating several concept designs based on this discussion. </p>
+
+<p>We took two of the ideas with the most promise and tested paper prototypes with customers and found that a 'click to add a step' approach (used by Messagebird, Activecampaign) performed significantly better than a 'drag to connect steps' approach (used by Twilio, Total.js flow)</p>
 <img src="assets/testing1.png"/>
-<p>
-We found that a 'click to add a step' approach (used by Messagebird, Activecampaign) performed significantly better than a 'drag to connect steps' approach (used by Twilio, Total.js flow)
-</p>
 
 <div class="divider"><div class="dividerInner"></div></div>
 
 <h2>Implementation</h2>
-<p>With a better idea of how customers would react to a workflow tool, I expanded on the design in a high fidelity prototype based on the most successful flow, and updated the language used.</p>
-<p>For example, 'start your workflow' created an expectation that users could pause or stop a workflow, which was not supported in the first release. I used the term 'trigger your workflow' to better reflect this.</p>
+<p>Now that we’d aligned on a direction, I created a high-fidelity prototype. 
+</p>
+<p>We also adjusted some of the language for better clarity. For example, the original phrase "start your workflow" implied that users could pause or stop the workflow—a feature not yet available. I changed this to "trigger your workflow" to set more accurate expectations.
+</p>
 <img src="assets/prototype.png" />
 <p>
-	Using a user journey map, we divided the work into multiple iterations, starting with the simplest real customer use case we could find: sending an emergency alert SMS to a predefined list when an online form is submitted.
+	To manage development efficiently, the PM engineering manager and I ran a user journey mapping excercise to break the project into multiple iterations. We began with a simple but real use case: sending an emergency alert SMS to a predefined list when an online form is submitted.
 </p><img src="assets/journey-map2.jpg" />
-<p>In the lead up to the first release, we ran three more rounds of user testing, including upcoming designs in Figma, and the live changes in a local development environment.
+<p>In the lead up to the first release, we ran three more rounds of user testing, sharing both figma prototypes and real code. 
+
 </p>
-<p>Testing the live code turned out to be particularly useful, as we found several users struggled with the 'drag to scroll' navigation we'd implemented. We updated the browser scroll function to zoom, a pattern borrowed from google maps, which performed better in later tests.
-</p>
+<p>Testing the live code turned out to be particularly useful, as we found several users struggling with the 'drag to scroll' navigation we'd implemented. By switching to a zoom function similar to Google Maps, we saw a noticeable improvement in later tests.</p>
 
 <div class="divider"><div class="dividerInner"></div></div>
 
-<h2>Post Release</h2>
-<p>Once we had users in the platform, I focused on observing sessions in fullstory, logging and prioritising usability issues in the backlog.</p>
+<h2>Outcome</h2>
+<p>The experience was well recieved by users, but more importantly for the business, the new modern, easy to use UI helped build trust in the product with future investors, contributing to Whispir's successful IPO in 2019.</p>
+
 <br /><br /><br /><br />
 
 </div>
