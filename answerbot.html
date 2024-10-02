@@ -37,25 +37,12 @@ font-family: Raleway;
 <div class="innercontent">
 
 
-	<p>Answer Bot is Zendesk's first party chatbot builder. The wider Answer Bot team includes 2 other designers, a content strategist and researcher along with 4 dedicated product teams. I sit on the bot builder team, and was the primary designer on the Multiple Flows work that I’ll describe today.
-	</p>
-    <a href='https://zendesk.wistia.com/medias/016up687kh'> The existing experience</a>
+	<p>Zendesk offers a bot builder as part of its suite of tools, allowing businesses to publish chatbots to their website, app or social channels. These bots can handle common customer service requests. The builder was well received, but the bots were difficult to maintain, and often got confused, resulting in relatively low adoption.
+</p>
+   <!--  <a href='https://zendesk.wistia.com/medias/016up687kh'> The existing experience</a> -->
 <img src="assets/BotUI.png" />
-    <div class="divider"><div class="dividerInner"></div></div>
-	
-    <h2>Audience</h2>
-	<p>
-		Our challenge was to increase adoption by enterprise customers, while continuing to support simpler SMB use cases.
-	</p>
-	<b>SMB</b>
-	<p>Joe manages a team of 3 chat support agents. They provide customer service through a chat widget on their website. To save his team time, he's built a chatbot using Zendesk Answer Bot. The bot answers a handful of simple queries, including ‘Forgot password' and 'My order hasn't arrived’. He's deflected some repetitive questions, and is happy with the product.
-	</p>
-	
-<b>Enterprise</b>
-	<p>Michelle manages a department of 22 chat support agents. Her goal is to automate answers to at least 80% of incoming customer questions and she’s formed a dedicated 'automation' team to do so. She sees Answer Bot as a basic, beginner level tool, unsuitable for her team's needs.
-	</p>
-
-	
+<p>I worked with a PM, Content strategist and Researcher to understand where customers were struggling, with the ultimate goal of increasing both the bots solve rate* and adoption among larger, enterprise customers.
+</p>
 	
     <div class="divider"><div class="dividerInner"></div></div>
 	<h2>Problem discovery</h2>
@@ -70,9 +57,9 @@ font-family: Raleway;
 </ul>
 
 <h3>Key insights</h3>
-	<p>Answer Bot’s interface was based on designing an end-to-end conversation as a single flow. This didn't really match our target customer's needs. Rather than a conversation, they needed a list of canned responses.
-		<img src="assets/bigtree.png" />
-    </p>	<p>Several interviewees shared spreadsheets with hundreds of questions they wanted to target, much larger than the five to ten FAQs that Answer Bot was optimised for. As a result of this mismatch, the few enterprise bots that had been built were complex and difficult to navigate with the pan and zoom controls.
+	<p>Our bot builder interface was based on designing an end-to-end conversation as a single tree diagram. We’d initially assumed that customers would offer solutions to 5 or 6 common issues, then have a human handle the rest. Our research showed that this assumption was not only incorrect, but was the key issue holding back our product adoption.</p>
+	<img src="assets/bigtree.png" />
+    	<p>Several interviewees shared spreadsheets with hundreds of topics they wanted the bot to handle, a much larger range than the bot was optimized for. Many were ‘hacking’ the interface in order to build huge, complex conversational diagrams. 
 	</p>
 
     <div class="pullquote">
@@ -81,20 +68,28 @@ font-family: Raleway;
        </div>
 	
     <h3>The problem</h3>
-	<p>Rather than building a single 'conversation', how can the interface be updated to better support building a 'list of answers'
+	<p>We surmised that the current bot builder didn’t match the customer's mental model. Rather than building a single 'conversation', we needed to allow our admins to build a 'list of answers'
 </p>
 <div class="divider"><div class="dividerInner"></div></div>
 <h2>	Solution Discovery</h2>
     <p>
-    Over several working sessions, I shared a number of competitor approaches with product and engineering, borrowing the best parts from different competitors and mocking up how they might work in our interface.</p><p>
-	The original assumption was that the bot builder would continue to function as a single large decision tree, but we quickly realised a more radical change was needed. We landed on removing the existing model entirely, in favour of multiple smaller flows, each one focused on a different customer request. The customer would type a question, and would be matched to the correct answer through our bot AI. This was a model used by a number of our competitors, and was much better suited to the ‘list of answers’ mindset.</p>
-
+    Over several working sessions, I shared a number of competitor approaches with product and engineering, borrowing the best parts from different competitors and mocking up how they might work in our interface.
+    </p>
+	<p>The original assumption was that the bot builder would continue to function as a single large decision tree, but we quickly realised a more radical change was needed. We landed on removing the existing model entirely, in favour of multiple smaller flows, each one focused on a different customer request. The customer would type a question, and would be matched to the correct answer through our bot AI. </p>
 	<img src="assets/flows.gif" />
 	<div class="divider"><div class="dividerInner"></div></div>
 	<h2>Iterating on the design</h2>
     <p>
-    Working with the product manager and 2 tech leads, I stripped back the functionality to an MVP. To keep the scope manageable, we were forced to adapt the original design around some technical constraints. For example, It was very difficult to publish each flow independently. I shared the risks around this with engineering, and we compromised by adding a 'publish status' column and optional 'inactive' state for the first release.
-    <img src="assets/Status1.png" /> <br /><br />
+    I created a number of variations on the design based on the experience for new, vs existing customers</p>   
+<ul><li>A customer who has build a bot</li>
+<li>A brand new user</li>
+	<li>A user migrating an existing bot</li>
+</ul>
+	<img src="assets/prototypes.png" /> 
+	<p>As this was a significant change to how the product worked, we were forced to adapt the original design around some technical constraints. For example, It was very difficult to publish each flow independently. I shared the risks around this with engineering, and we compromised by adding a 'publish status' column and optional 'inactive' state for the first release. </p>
+
+
+	<img src="assets/Status1.png" /> <br /><br />
 </p><p>
     The product manager and I also had regular consults with the data science team throughout the project, leading to a number of improvements to the design, most notably allowing admins to manually add training phrases. This boosted the bot's performance significantly, but the concept of training an AI was difficult to communicate to our users. The content strategist and I iterated on the design several times, over 2 rounds of user testing to get the messaging right.
 	</p>  <img src="assets/Frame 1.png" /> 
@@ -106,14 +101,16 @@ font-family: Raleway;
 	
 <div class="divider"><div class="dividerInner"></div></div>
 <h3>Outcome</h3>
-	<p>The end result was a set of annotated Figma prototypes describing the experience from various customer's points of view. I presented these to senior leadership, and regularly consulted with engineering throughout the development process. 
+	<p>We saw a significant uptick in adoption of the product by our key enterprise audience over the next 12 months, with the number of active bots increasing by 90%. Of those customers that adopted the bot, we also saw an increase in the bot’s effectiveness. The bot’s solve rate* for customers who had adopted the feature was more than double that of those using a single flow 
+<br /><br /><br />
+* solve rate: % of conversation where a solution was found, and that weren’t later handed over to a human agent) 
 </p>	
 <ul>
 	<li>A customer who has build a bot</li>
 	<li>A brand new user</li>
 	<li>A user migrating an existing bot [phase 2]</li>
 </ul>
-<img src="assets/prototypes.png" /> 
+
 	
 <p>	The product is currently in a closed beta and is scheduled for general release in Q2 of this year.</p>
 	
